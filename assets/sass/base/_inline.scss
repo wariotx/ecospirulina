@@ -2,15 +2,6 @@
  * Created by Leopoldo on 13/01/2017.
  */
 @import "../utils/variables";
-@function invert_lightness( $color, $factor:1.0 ){
-  @return change_color($color, $lightness: 100%-$factor*lightness($color));
-}
-@function tint( $color, $per ) {
-  @return mix(#fff, $color, 1.0*$per);
-}
-@function shade( $color, $per ) {
-  @return mix(#000, $color, 1.0*$per);
-}
 $color_links_invert: invert_lightness($color_links);
 $color_body_invert: invert_lightness($color_body);
 $text_color: $color_body !default;

@@ -98,3 +98,12 @@
 	box-shadow:
 		inset 0 -1px 0 rgba(#000,.3);
 }
+@function invert_lightness( $color, $factor:1.0 ){
+  @return change_color($color, $lightness: 100%-$factor*lightness($color));
+}
+@function tint( $color, $per ) {
+  @return mix(#fff, $color, 1.0*$per);
+}
+@function shade( $color, $per ) {
+  @return mix(#000, $color, 1.0*$per);
+}
