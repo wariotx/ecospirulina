@@ -1121,6 +1121,10 @@ a.remove {
 		text-indent: 0;
 		text-align: center;
 	}
+
+	&:focus {
+		outline: 0;
+	}
 }
 
 /**
