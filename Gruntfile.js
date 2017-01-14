@@ -105,7 +105,7 @@ module.exports = function( grunt ) {
 			},
 			main: {
 				files: {
-					'style.min.css': 'style.css',
+					'style.css': 'style.css',
 				}
 			},
 			admin: {
