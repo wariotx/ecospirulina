@@ -125,21 +125,21 @@ module.exports = function( grunt ) {
 				cwd: 'assets/sass/admin/welcome-screen/',
 				src: ['*.css'],
 				dest: 'assets/sass/admin/welcome-screen/',
-				ext: '.min.css'
+				ext: '.css'
 			},
 			jetpack: {
 				expand: true,
 				cwd: 'assets/sass/jetpack/',
 				src: ['*.css'],
 				dest: 'assets/sass/jetpack/',
-				ext: '.min.css'
+				ext: '.css'
 			},
 			woocommerce: {
 				expand: true,
 				cwd: 'assets/sass/woocommerce/',
 				src: ['*.css'],
 				dest: 'assets/sass/woocommerce/',
-				ext: '.min.css'
+				ext: '.css'
 			}
 		},
 
