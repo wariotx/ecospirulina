@@ -95,7 +95,19 @@ module.exports = function( grunt ) {
                     {src: 'assets/sass/woocommerce/extensions/quick-view.scss', expand: true, ext:'.css'},
                     {src: 'assets/sass/jetpack/jetpack.scss', expand: true, ext:'.css'}
 				]
-			}
+			},
+            main: {
+                options: {
+                    require: 'susy',
+                    sourcemap: 'none',
+                    includePaths: require('node-bourbon').includePaths
+                },
+                files: [{
+                    src: 'style.scss',
+                    expand: true,
+                    ext: '.css'
+                }],
+            }
 		},
 
 		// Minify all .css files.
