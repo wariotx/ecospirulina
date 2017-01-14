@@ -21,10 +21,10 @@ $header_background_color: lighten($color_links, 10%) !default;
 $header_text_color: $color_body_invert !default;
 $heading_color: $color_links !default;
 $button_background_color: shade($accent_color, 0%) !default;
-$button_text_color: invert_lightness($button_background_color, 0.5) !default;
+$button_text_color: invert_lightness($button_background_color, 0.25) !default;
 $button_alt_background_color: darken($accent_color, 5%) !default;
 $button_alt_background_color: adjust_hue($accent_color, 120);
-$button_alt_text_color: invert_lightness($button_alt_background_color, 0.5) !default;
+$button_alt_text_color: invert_lightness($button_alt_background_color, 0.25) !default;
 
 .main-navigation ul li a,
 .site-title a,
