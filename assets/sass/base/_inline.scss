@@ -1,0 +1,237 @@
+/**
+ * Created by Leopoldo on 13/01/2017.
+ */
+@import "../utils/variables";
+@function invert_lightness( $color, $factor:1.0 ){
+  @return change_color($color, $lightness: 100%-$factor*lightness($color));
+}
+@function tint( $color, $per ) {
+  @return mix(#fff, $color, 1.0*$per);
+}
+@function shade( $color, $per ) {
+  @return mix(#000, $color, 1.0*$per);
+}
+$color_links_invert: invert_lightness($color_links);
+$color_body_invert: invert_lightness($color_body);
+$text_color: $color_body !default;
+$background_color: $body-background !default;
+$accent_color: $color_woocommerce !default;
+$header_link_color: $color_links_invert !default;
+$header_background_color: lighten($color_links, 10%) !default;
+$header_text_color: $color_body_invert !default;
+$heading_color: $color_links !default;
+$button_background_color: shade($accent_color, 0%) !default;
+$button_text_color: invert_lightness($button_background_color, 0.5) !default;
+$button_alt_background_color: darken($accent_color, 5%) !default;
+$button_alt_background_color: adjust_hue($accent_color, 120);
+$button_alt_text_color: invert_lightness($button_alt_background_color, 0.5) !default;
+
+.main-navigation ul li a,
+.site-title a,
+ul.menu li a,
+.site-branding h1 a,
+.site-footer .storefront-handheld-footer-bar a:not(.button),
+button.menu-toggle,
+button.menu-toggle:hover {
+  //color: ' . $storefront_theme_mods['header_link_color'] . ';
+  color: $header_link_color;
+}
+
+button.menu-toggle,
+button.menu-toggle:hover {
+  //border-color: ' . $storefront_theme_mods['header_link_color'] . ';
+  border-color: $header_link_color;
+}
+
+.main-navigation ul li a:hover,
+.main-navigation ul li:hover > a,
+.site-title a:hover,
+a.cart-contents:hover,
+.site-header-cart .widget_shopping_cart a:hover,
+.site-header-cart:hover > li > a,
+.site-header ul.menu li.current-menu-item > a {
+  //color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_link_color'], 50 ) . ';
+  color: lighten($header_link_color, 50%);
+}
+
+table th {
+  //background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
+  background-color: darken($background_color, 7%);
+}
+
+table tbody td {
+  //background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -2 ) . ';
+  background-color: darken($background_color, 2%);
+}
+
+table tbody tr:nth-child(2n) td {
+  //background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -4 ) . ';
+  background-color: darken($background_color, 4%);
+}
+
+.site-header,
+.secondary-navigation ul ul,
+.main-navigation ul.menu > li.menu-item-has-children:after,
+.secondary-navigation ul.menu ul,
+.storefront-handheld-footer-bar,
+.storefront-handheld-footer-bar ul li > a,
+.storefront-handheld-footer-bar ul li.search .site-search,
+button.menu-toggle,
+button.menu-toggle:hover {
+  //background-color: ' . $storefront_theme_mods['header_background_color'] . ';
+  background-color: darken($header_background_color, 7%);
+}
+
+p.site-description,
+.site-header,
+.storefront-handheld-footer-bar {
+  //color: ' . $storefront_theme_mods['header_text_color'] . ';
+  color: $header_text_color;
+}
+
+.storefront-handheld-footer-bar ul li.cart .count,
+button.menu-toggle:after,
+button.menu-toggle:before,
+button.menu-toggle span:before {
+  //background-color: ' . $storefront_theme_mods['header_link_color'] . ';
+  background-color: $header_link_color;
+}
+
+.storefront-handheld-footer-bar ul li.cart .count {
+  //color: ' . $storefront_theme_mods['header_background_color'] . ';
+  color: $header_background_color;
+}
+
+.storefront-handheld-footer-bar ul li.cart .count {
+  //border-color: ' . $storefront_theme_mods['header_background_color'] . ';
+  border-color: $header_background_color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  //color: ' . $storefront_theme_mods['heading_color'] . ';
+  color: $heading_color;
+}
+
+.widget h1 {
+  //border-bottom-color: ' . $storefront_theme_mods['heading_color'] . ';
+  border-bottom-color: $heading_color;
+}
+
+body,
+.secondary-navigation a,
+.onsale,
+.pagination .page-numbers li .page-numbers:not(.current), .woocommerce-pagination .page-numbers li .page-numbers:not(.current) {
+  //color: ' . $storefront_theme_mods['text_color'] . ';
+  color: $text_color;
+}
+
+.widget-area .widget a,
+.hentry .entry-header .posted-on a,
+.hentry .entry-header .byline a {
+  //color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['text_color'], 50 ) . ';
+  color: lighten($text_color, 50%);
+}
+
+a  {
+  //color: ' . $storefront_theme_mods['accent_color'] . ';
+  color: $accent_color;
+}
+
+a:focus,
+.button:focus,
+.button.alt:focus,
+.button.added_to_cart:focus,
+.button.wc-forward:focus,
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+  //outline-color: ' . $storefront_theme_mods['accent_color'] . ';
+  outline-color: $accent_color;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"], .button, .added_to_cart, .widget a.button, .site-header-cart .widget_shopping_cart a.button {
+  //background-color: ' . $storefront_theme_mods['button_background_color'] . ';
+  //border-color: ' . $storefront_theme_mods['button_background_color'] . ';
+  //color: ' . $storefront_theme_mods['button_text_color'] . ';
+  background-color: $button_background_color;
+  border-color: $button_background_color;
+  color: $button_text_color;
+  border-radius: 3px;
+  &:hover {
+    background-color: darken($button_background_color, 10%);
+    border-color: darken($button_background_color, 10%);
+    color: darken($button_text_color, 10%);
+  }
+}
+
+button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submit"].alt, .button.alt, .added_to_cart.alt, .widget-area .widget a.button.alt, .added_to_cart, .pagination .page-numbers li .page-numbers.current, .woocommerce-pagination .page-numbers li .page-numbers.current, .widget a.button.checkout {
+  //background-color: ' . $storefront_theme_mods['button_alt_background_color'] . ';
+  //border-color: ' . $storefront_theme_mods['button_alt_background_color'] . ';
+  //color: ' . $storefront_theme_mods['button_alt_text_color'] . ';
+  background-color: $button_alt_background_color;
+  border-color: $button_alt_background_color;
+  color: $button_alt_text_color;
+  &:hover {
+    background-color: lighten($button_alt_background_color, 10%);
+    border-color: lighten($button_alt_background_color, 10%);
+    color: $button_alt_text_color;
+  }
+}
+
+#comments .comment-list .comment-content .comment-text {
+  //background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
+  background-color: darken($background_color, 7%);
+}
+
+.site-footer {
+  //background-color: ' . $storefront_theme_mods['footer_background_color'] . ';
+  //color: ' . $storefront_theme_mods['footer_text_color'] . ';
+  background-color: $color_body;
+  color: $body-background;
+}
+
+.site-footer a:not(.button) {
+  //color: ' . $storefront_theme_mods['footer_link_color'] . ';
+  color: $body-background;
+}
+
+.site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6 {
+  //color: ' . $storefront_theme_mods['footer_heading_color'] . ';
+  color: $heading_color;
+}
+
+#order_review,
+#payment .payment_methods > li .payment_box {
+  //background-color: ' . $storefront_theme_mods['background_color'] . ';
+  background-color: $background_color;
+}
+
+#payment .payment_methods > li {
+  //background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -5 ) . ';
+  background-color: darken($background_color, 7%);
+}
+
+#payment .payment_methods > li:hover {
+  //background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -10 ) . ';
+  background-color: darken($background_color, 10%);
+}
+
+@media screen and ( min-width: 768px ) {
+  .secondary-navigation ul.menu a:hover {
+    //color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_text_color'], $brighten_factor ) . ';
+    color: lighten($header_text_color, 10%)
+  }
+
+  .secondary-navigation ul.menu a {
+    //color: ' . $storefront_theme_mods['header_text_color'] . ';
+    color: $header_text_color;
+  }
+
+  .site-header-cart .widget_shopping_cart,
+  .main-navigation ul.menu ul.sub-menu,
+  .main-navigation ul.nav-menu ul.children {
+    //background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_background_color'], -8 ) . ';
+    background-color: darken($header_background_color, 8%);
+  }
+}
