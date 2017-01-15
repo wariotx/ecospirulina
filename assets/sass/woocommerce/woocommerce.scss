@@ -2084,6 +2084,7 @@ dl.variation {
 			height: auto;
 			width: auto;
 			text-indent: 0;
+			text-align: right;
 
 			&:after {
 				@include fa-icon();
@@ -2091,6 +2092,7 @@ dl.variation {
 				float: right;
 				content: $woocommerce_cart_icon;
 				line-height: 1.618;
+				margin-left: .327em;
 			}
 
 			.amount {
