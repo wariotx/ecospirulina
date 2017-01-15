@@ -18,7 +18,7 @@ $button_alt_background_color: $info !default;
 $button_alt_text_color: invert_lightness($button_alt_background_color, 0.25) !default;
 
 $header_link_color: invert($color_links_invert);
-$header_background_color: invert(darken($color_links, 10%));
+$header_background_color: lighten(invert($color_links), 10%);
 $header_text_color: invert($color_body_invert);
 $heading_color: invert($color_links);
 
@@ -47,7 +47,7 @@ a.cart-contents:hover,
 .site-header-cart:hover > li > a,
 .site-header ul.menu li.current-menu-item > a {
   //color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_link_color'], 50 ) . ';
-  color: lighten($header_link_color, 50%);
+  color: darken($header_link_color, 50%);
 }
 
 table th {
