@@ -50,3 +50,4 @@ function espirulina_wc_tweaks() {
         remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10);
     }
 }
+add_filter( 'wpseo_hide_version', '__return_true' );
