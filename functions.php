@@ -51,3 +51,16 @@ function espirulina_wc_tweaks() {
     }
 }
 add_filter( 'wpseo_hide_version', '__return_true' );
+add_filter( 'body_class', function ( $classes ) {
+    if( isset($classes['left-sidebar']) ) {
+        unset($classes['left-sidebar']);
+    }
+    if( isset($classes['right-sidebar']) ) {
+        unset($classes['right-sidebar']);
+    }
+    $key = array_search( 'storefront-full-width-content', $classes );
+    if ( false === $key ) {
+        $classes[] = 'storefront-full-width-content';
+    }
+    return $classes;
+});
