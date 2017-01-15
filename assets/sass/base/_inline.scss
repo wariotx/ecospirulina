@@ -17,6 +17,11 @@ $button_text_color: invert_lightness($button_background_color, 0.25) !default;
 $button_alt_background_color: $info !default;
 $button_alt_text_color: invert_lightness($button_alt_background_color, 0.25) !default;
 
+$header_link_color: invert($color_links_invert);
+$header_background_color: invert(darken($color_links, 10%));
+$header_text_color: invert($color_body_invert);
+$heading_color: invert($color_links);
+
 .main-navigation ul li a,
 .site-title a,
 ul.menu li a,
