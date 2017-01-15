@@ -48,19 +48,21 @@ function espirulina_wc_tweaks() {
         remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
         remove_action('woocommerce_after_shop_loop', 'woocommerce_catalog_ordering', 10);
         remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10);
+        if(is_woocommerce()){
+            add_filter( 'body_class', function ( $classes ) {
+                if( isset($classes['left-sidebar']) ) {
+                    unset($classes['left-sidebar']);
+                }
+                if( isset($classes['right-sidebar']) ) {
+                    unset($classes['right-sidebar']);
+                }
+                $key = array_search( 'storefront-full-width-content', $classes );
+                if ( false === $key ) {
+                    $classes[] = 'storefront-full-width-content';
+                }
+                return $classes;
+            });
+        }
     }
 }
 add_filter( 'wpseo_hide_version', '__return_true' );
-add_filter( 'body_class', function ( $classes ) {
-    if( isset($classes['left-sidebar']) ) {
-        unset($classes['left-sidebar']);
-    }
-    if( isset($classes['right-sidebar']) ) {
-        unset($classes['right-sidebar']);
-    }
-    $key = array_search( 'storefront-full-width-content', $classes );
-    if ( false === $key ) {
-        $classes[] = 'storefront-full-width-content';
-    }
-    return $classes;
-});
