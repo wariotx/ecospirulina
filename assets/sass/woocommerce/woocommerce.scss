@@ -500,6 +500,13 @@ ul.products {
 			.woocommerce-main-image {
 				margin-bottom: ms(3);
 				display: block;
+				top: 1px;
+				position: relative;
+				left: 1px;
+				img {
+					max-width: 90%;
+					margin: auto;
+				}
 			}
 
 			.thumbnails {
