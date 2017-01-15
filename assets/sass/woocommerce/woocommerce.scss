@@ -2146,6 +2146,10 @@ dl.variation {
 				display: block;
 			}
 		}
+
+		.cart-contents:after, .widget_shopping_cart {
+			color: $color_woocommerce;
+		}
 	}
 
 	.site-search {
