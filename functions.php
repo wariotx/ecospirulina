@@ -66,3 +66,7 @@ function espirulina_wc_tweaks() {
     }
 }
 add_filter( 'wpseo_hide_version', '__return_true' );
+add_filter( 'storefront_header_styles', function( $styles ) {
+    $styles['background-image'] = 'url('.get_stylesheet_directory_uri().'/assets/img/header.jpg'.')';
+    return $styles;
+});
