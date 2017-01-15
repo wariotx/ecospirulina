@@ -2,6 +2,8 @@
 // Variables allow you to re-use colors, sizes, and other values without repeating
 // yourself. This means that changes that should be small, such as tweaking the
 // coloring or the sizing, can be done in one place, not all over the stylesheet.
+@import '../../../assets/sass/vendors/font-awesome/variables';
+
 $font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
@@ -37,3 +39,5 @@ $susy: (
 		box-sizing: false
 	)
 );
+//$woocommerce_cart_icon: $fa-var-shopping-basket;
+$woocommerce_cart_icon: $fa-var-shopping-bag;

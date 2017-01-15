@@ -181,7 +181,7 @@
 
 			&.cart {
 				> a:before {
-					content: $fa-var-shopping-basket;
+					content: $woocommerce_cart_icon;
 				}
 
 				.count {
@@ -1467,7 +1467,7 @@ form.checkout {
 			}
 
 			&.woocommerce-MyAccount-navigation-link--orders a:before {
-				content: $fa-var-shopping-basket;
+				content: $woocommerce_cart_icon;
 			}
 
 			&.woocommerce-MyAccount-navigation-link--downloads a:before {
@@ -2089,7 +2089,7 @@ dl.variation {
 				@include fa-icon();
 				height: 1em;
 				float: right;
-				content: $fa-var-shopping-basket;
+				content: $woocommerce_cart_icon;
 				line-height: 1.618;
 			}
 
