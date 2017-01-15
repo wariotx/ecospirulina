@@ -49,6 +49,17 @@ a.cart-contents:hover,
   //color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_link_color'], 50 ) . ';
   color: darken($header_link_color, 50%);
 }
+.main-navigation ul li:hover > a,
+.site-header ul.menu li.current-menu-item > a {
+  &:after {
+    content: "";
+    outline: 1px solid $accent_color;
+    display: table;
+    width: 100%;
+    height: 0px;
+    padding: 0 .25em;
+  }
+}
 
 table th {
   //background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
