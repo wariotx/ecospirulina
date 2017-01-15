@@ -17,6 +17,7 @@
 	.site-header {
 		padding-top: ms(5);
 		padding-bottom: 0;
+		background-image: url("./assets/img/header.jpg");
 
 		.site-branding {
 			display: block;
@@ -453,7 +454,8 @@
 	.storefront-primary-navigation {
 		clear: both;
 		@include clearfix;
-		background: rgba(#000,.06);
+		//background: rgba(#000,.06);
+		background: rgba(#fff, 0.66);
 		margin-left: -99em;
 		margin-right: -99em;
 		padding-left: 99em;
