@@ -11,6 +11,10 @@ $header_link_color: $color_links_invert !default;
 $header_background_color: lighten($color_links, 10%) !default;
 $header_text_color: $color_body_invert !default;
 $heading_color: $color_links !default;
+$footer_link_color: $color_links_invert !default;
+$footer_background_color: lighten($color_links, 10%) !default;
+$footer_text_color: $color_body_invert !default;
+$footer_heading_color: $color_links !default;
 $button_background_color: $accent_color !default;
 $button_text_color: invert_lightness($button_background_color, 0.25) !default;
 //$button_alt_background_color: darken($accent_color, 5%) !default;
@@ -20,7 +24,7 @@ $button_alt_text_color: invert_lightness($button_alt_background_color, 0.25) !de
 $header_link_color: lighten(invert($color_links_invert), 10%);
 $header_background_color: lighten(invert($color_links), 20%);
 $header_text_color: lighten(invert($color_body_invert), 10%);
-$heading_color: invert($color_links);
+//$heading_color: invert($color_links);
 
 .main-navigation ul li a,
 .site-title a,
@@ -194,18 +198,18 @@ button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submi
 .site-footer {
   //background-color: ' . $storefront_theme_mods['footer_background_color'] . ';
   //color: ' . $storefront_theme_mods['footer_text_color'] . ';
-  background-color: $color_body;
-  color: $body-background;
+  background-color: $footer_background_color;
+  color: $footer_text_color;
 }
 
 .site-footer a:not(.button) {
   //color: ' . $storefront_theme_mods['footer_link_color'] . ';
-  color: $body-background;
+  color: $footer_link_color;
 }
 
 .site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6 {
   //color: ' . $storefront_theme_mods['footer_heading_color'] . ';
-  color: $heading_color;
+  color: $footer_heading_color;
 }
 
 #order_review,
