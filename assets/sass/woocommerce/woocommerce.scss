@@ -1847,6 +1847,8 @@ p.stars {
 			a {
 				padding: 1em 0;
 				display: block;
+				position: relative;
+				left: 1px;
 			}
 
 			&:after {
