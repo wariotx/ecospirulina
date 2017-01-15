@@ -21,7 +21,7 @@ $color_border:		rgba(0,0,0,0.05);
 $color_woocommerce: #6baf4e;
 $error: 			#e2401c;
 $success: 			#0f834d;
-$info: 				#3D9CD2;
+$info: 				adjust_hue($color_woocommerce, 100);//#3D9CD2;
 
 // layout sizes
 $desktop:			768px;
