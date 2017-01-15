@@ -29,6 +29,10 @@
 				background-color: rgba(#fff,.8);
 				padding: .5rem 1rem;
 				margin: -.5rem -1rem;
+				box-shadow: 0 0 4px 0px rgba(#000,.8);
+				border-radius: 4px;
+				border: 1px solid $color_woocommerce;
+				outline: 0;
 			}
 
 			img {
