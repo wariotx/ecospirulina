@@ -54,7 +54,7 @@ a.cart-contents:hover,
   color: darken($header_link_color, 50%);
 }
 .main-navigation ul li:hover > a,
-.site-header ul.menu li.current-menu-item > a {
+.main-navigation ul li.current-menu-item > a {
   &:after {
     content: "";
     outline: 1px solid $accent_color;
