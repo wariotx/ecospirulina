@@ -2580,12 +2580,21 @@ dl.variation {
 
 			.cart_totals,
 			.shipping_calculator {
-				@include span(last 6 of 12);
-				// TODO
+				//@include span(last 6 of 12);
+				@include span(12 of 12);
+			}
+		}
+		&.woocommerce-cart,
+		&.woocommerce-checkout {
+			.site-main {
+				@include span(9 of 12);
 				margin-left: auto;
 				margin-right: auto;
 				float: none;
-				//
+			}
+
+			#order_review {
+				@include span(12 of 12);
 			}
 		}
 	}
