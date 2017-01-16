@@ -1,28 +1,31 @@
 {
   "private": true,
-  "name":     "espirulina",
-  "title":    "Espirulina",
-  "version":  "0.1.0",
+  "name": "espirulina",
+  "title": "Espirulina",
+  "version": "0.1.0",
   "homepage": "https://www.ecospirulina.com/",
   "license": "Comercial",
   "main": "Gruntfile.js",
   "devDependencies": {
-    "grunt":                  "*",
-    "grunt-checktextdomain":  "*",
-    "grunt-contrib-cssmin":   "*",
-    "grunt-contrib-jshint":   "*",
-    "grunt-contrib-uglify":   "*",
-    "grunt-contrib-watch":    "*",
-    "grunt-wp-i18n":          "*",
-    "grunt-rtlcss":           "*",
-    "grunt-sass":             "*",
-    "node-sass":              "*",
-    "susy":                   "*",
-    "node-bourbon":           "*",
-    "grunt-contrib-copy":     "*"
+    "grunt": "*",
+    "grunt-checktextdomain": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-wp-i18n": "*",
+    "grunt-rtlcss": "*",
+    "grunt-sass": "*",
+    "node-sass": "*",
+    "susy": "*",
+    "node-bourbon": "*",
+    "grunt-contrib-copy": "*"
   },
   "engines": {
-    "node":                   ">=0.8.0",
-    "npm":                    ">=1.1.0"
+    "node": ">=0.8.0",
+    "npm": ">=1.1.0"
+  },
+  "dependencies": {
+    "sticky-kit": "^1.1.3"
   }
 }
