@@ -14,8 +14,8 @@ function espirulina_remove_scripts() {
 
     // Removes the parent themes stylesheet and scripts from inc/enqueue.php
     //Sticky Header
-//    wp_enqueue_script( 'jquery-sticky', get_stylesheet_directory_uri() . '/assets/js/jquery-sticky.min.js', array( 'jquery' ), '1.0.4' );
-//    wp_enqueue_script( 'espire-sticky-navigation', get_stylesheet_directory_uri() . '/assets/js/sticky-navigation.min.js', array( 'jquery', 'jquery-sticky' ), $the_theme->get( 'Version' ) );
+    wp_enqueue_script( 'sticky-kit', get_stylesheet_directory_uri() . '/assets/js/sticky-kit.min.js', array( 'jquery' ), '1.0.0' );
+    wp_enqueue_script( 'espire-sticky-navigation', get_stylesheet_directory_uri() . '/assets/js/sticky-navigation.js', array( 'jquery', 'sticky-kit' ), $the_theme->get( 'Version' ) );
 }
 add_action( 'wp_enqueue_scripts', 'espirulina_remove_scripts', 25 );
 
