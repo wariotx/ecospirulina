@@ -2581,6 +2581,11 @@ dl.variation {
 			.cart_totals,
 			.shipping_calculator {
 				@include span(last 6 of 12);
+				// TODO
+				margin-left: auto;
+				margin-right: auto;
+				float: none;
+				//
 			}
 		}
 	}
