@@ -41,16 +41,6 @@ add_filter( 'storefront_credit_link', '__return_false' );
 add_action( 'wp', 'espirulina_wc_tweaks', 999 );
 function espirulina_wc_tweaks() {
     if (class_exists('WooCommerce')) {
-        if (is_shop() || is_product_taxonomy() || is_product_category() || is_product_tag()) {
-            remove_action('storefront_sidebar', 'storefront_get_sidebar');
-        }
-        if (is_product()) {
-            remove_action('storefront_sidebar', 'storefront_get_sidebar');
-        }
-        remove_action('woocommerce_after_shop_loop', 'woocommerce_result_count', 20);
-        remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
-        remove_action('woocommerce_after_shop_loop', 'woocommerce_catalog_ordering', 10);
-        remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10);
         if(is_woocommerce()){
             add_filter( 'body_class', function ( $classes ) {
                 if( isset($classes['left-sidebar']) ) {
@@ -70,6 +60,22 @@ function espirulina_wc_tweaks() {
 }
 add_filter( 'wpseo_hide_version', '__return_true' );
 add_filter( 'storefront_header_styles', function( $styles ) {
-    $styles['background-image'] = '';
+    if( isset($styles['background-image']) ) {
+        unset($styles['background-image']);
+    };
     return $styles;
+});
+add_action('init', function (){
+    if (class_exists('WooCommerce')) {
+        if (is_shop() || is_product_taxonomy() || is_product_category() || is_product_tag()) {
+            remove_action('storefront_sidebar', 'storefront_get_sidebar');
+        }
+        if (is_product()) {
+            remove_action('storefront_sidebar', 'storefront_get_sidebar');
+        }
+    }
+    remove_action('woocommerce_after_shop_loop', 'woocommerce_result_count', 20);
+    remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+    remove_action('woocommerce_after_shop_loop', 'woocommerce_catalog_ordering', 10);
+    remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10);
 });
