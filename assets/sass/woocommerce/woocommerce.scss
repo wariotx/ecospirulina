@@ -2929,13 +2929,55 @@ dl.variation {
 // YITH Quick View
 .yith-wcqv-wrapper {
 	.yith-wcqv-main {
+		background: $body-background;
 		.yith-quick-view-content {
 			div.images {
 				width: 40%;
 			}
 			div.summary {
 				width: 60%;
+				h1,
+				div[itemprop="description"],
+				.product_meta,
+				.price,
+				.price ins {
+					color: $color_links;
+				}
+				.woocommerce-product-rating .star-rating,
+				.woocommerce-product-rating .star-rating:before {
+					color: #f7c104;
+				}
+
+				button.button.alt {
+					background: $color_woocommerce;
+					color: #ffffff;
+					&:hover {
+						background: darken($color_woocommerce, 10%);
+						color: #ffffff;
+					}
+				}
+				.yith-wcqv-view-details {
+					background: #ebe9eb;
+					color: #515151;
+					&:hover {
+						background: darken(#ebe9eb, 10%);
+						color: #515151;
+					}
+				}
 			}
 		}
 	}
 }
+.product .yith-wcqv-button {
+	&:not(.button) span,
+	&:not(.inside-thumb) {
+		color:#ffffff;
+		background:$color_links;
+	}
+	&:not(.button):hover span,
+	&:not(.inside-thumb):hover {
+		color:#ffffff;
+		background:lighten($color_links, 10%);
+	}
+}
+// End YITH Quick View
