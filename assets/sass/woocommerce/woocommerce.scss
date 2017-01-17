@@ -532,13 +532,12 @@ ul.products {
 			@include clearfix;
 			margin-bottom: ms(3);
 			padding: 1em 0;
+			display: inline-block;
 
-			.quantity {
-				float: left;
-			}
-
+			.quantity,
 			.button {
-				float: right;
+				//float: right;
+				display: inline-block;
 			}
 		}
 
