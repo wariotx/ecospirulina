@@ -2969,15 +2969,31 @@ dl.variation {
 	}
 }
 .product .yith-wcqv-button {
-	&:not(.button) span,
-	&:not(.inside-thumb) {
+	%foo {
 		color:#ffffff;
 		background:$color_links;
 	}
-	&:not(.button):hover span,
-	&:not(.inside-thumb):hover {
+	%bar {
 		color:#ffffff;
 		background:lighten($color_links, 10%);
+	}
+	&:not(.button) {
+		span {
+			@extend %foo;
+			&:before {
+				@include fa-icon();
+				content: $fa-var-search-plus;
+			}
+		}
+		&:hover span {
+			@extend %bar;
+		}
+	}
+	&:not(.inside-thumb) {
+		@extend %foo;
+		&:hover {
+			@extend %bar;
+		}
 	}
 }
 // End YITH Quick View
