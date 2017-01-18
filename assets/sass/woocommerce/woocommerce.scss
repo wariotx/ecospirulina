@@ -2926,52 +2926,54 @@ dl.variation {
 	}
 }
 // YITH Quick View
-.yith-wcqv-wrapper {
-	.yith-wcqv-main {
-		background: $body-background;
-		.yith-quick-view-content {
-			div.images {
-				width: 40%;
-			}
-			div.summary {
-				width: 60%;
-				h1,
-				div[itemprop="description"],
-				.product_meta,
-				.price,
-				.price ins {
-					color: $color_links;
+.yith-quick-view.yith-modal {
+	.yith-wcqv-wrapper {
+		.yith-wcqv-main {
+			background: $body-background;
+			.yith-quick-view-content {
+				div.images {
+					width: 40%;
 				}
-				.woocommerce-product-rating .star-rating,
-				.woocommerce-product-rating .star-rating:before {
-					color: #f7c104;
-				}
+				div.summary {
+					width: 60%;
+					h1,
+					div[itemprop="description"],
+					.product_meta,
+					.price,
+					.price ins {
+						color: $color_links;
+					}
+					.woocommerce-product-rating .star-rating,
+					.woocommerce-product-rating .star-rating:before {
+						color: #f7c104;
+					}
 
-				button.button.alt {
-					background: $color_woocommerce;
-					color: #ffffff;
-					&:hover {
-						background: darken($color_woocommerce, 10%);
+					button.button.alt {
+						background: $color_woocommerce;
 						color: #ffffff;
+						&:hover {
+							background: darken($color_woocommerce, 10%);
+							color: #ffffff;
+						}
 					}
-				}
-				.yith-wcqv-view-details {
-					background: #ebe9eb;
-					color: #515151;
-					&:hover {
-						background: darken(#ebe9eb, 10%);
+					.yith-wcqv-view-details {
+						background: #ebe9eb;
 						color: #515151;
+						&:hover {
+							background: darken(#ebe9eb, 10%);
+							color: #515151;
+						}
 					}
 				}
 			}
-		}
-		a.yith-quick-view-close {
-			outline: 0;
+			a.yith-quick-view-close {
+				outline: 0;
+			}
 		}
 	}
-}
-.yith-quick-view .yith-quick-view-nav.reveal a div img {
-	top: -2px;
+	.yith-quick-view-nav.reveal a div img {
+		top: -2px;
+	}
 }
 .product .yith-wcqv-button {
 	%foo {
