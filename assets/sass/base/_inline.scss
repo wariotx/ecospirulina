@@ -16,10 +16,10 @@ $footer_background_color: lighten($color_links, 10%) !default;
 $footer_text_color: $color_body_invert !default;
 $footer_heading_color: $color_links !default;
 $button_background_color: $accent_color !default;
-$button_text_color: invert_lightness($button_background_color, 0.25) !default;
+$button_text_color: invert_lightness($button_background_color, 0.125) !default;
 //$button_alt_background_color: darken($accent_color, 5%) !default;
 $button_alt_background_color: $info !default;
-$button_alt_text_color: invert_lightness($button_alt_background_color, 0.25) !default;
+$button_alt_text_color: invert_lightness($button_alt_background_color, 0.125) !default;
 
 $header_link_color: lighten(invert($color_links_invert), 10%);
 $header_background_color: lighten(invert($color_links), 20%);
