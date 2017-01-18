@@ -1555,3 +1555,36 @@ button.menu-toggle {
 		}
 	}
 }
+
+//Condiciones de uso
+.page-id-48 {
+	ol {
+		counter-reset: item;
+		list-style-type: none;
+	}
+
+	ol > li:before {
+		font-weight: bold;
+		content: counters(item,".")".   ";
+		counter-increment: item;
+		margin-right: .25em;
+	}
+
+	ol > li {
+		margin-bottom: 1em;
+	}
+
+	ol ol {
+		counter-reset: subitem;
+		list-style-type: none;
+	}
+
+	li ol > li:before {
+		content: counters(item,".")"."counters(subitem,".")".   ";
+		counter-increment: subitem;
+	}
+
+	li ol > li {
+		margin-top: .5em;
+	}
+}
