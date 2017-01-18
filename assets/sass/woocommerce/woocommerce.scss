@@ -740,7 +740,7 @@ a.reset_variations {
 	a {
 		@include underlinedLink();
 	}
-	span:first-of-type > a {
+	& > span > span > a {
 		&:first-of-type {
 			&:before {
 				@include fa-icon();
