@@ -321,6 +321,10 @@ ul.products {
 
 		.woocommerce-LoopProduct-link {
 			display: block;
+			overflow: hidden;
+			img {
+				margin: -1*ms(3) auto;
+			}
 		}
 
 		.price {
