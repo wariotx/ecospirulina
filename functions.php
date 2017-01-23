@@ -101,9 +101,9 @@ JS;
     }, 0);
     // Change number or products per row to 3
     add_filter('loop_shop_columns', function() {
-            return 5; // 3 products per row
+            return 4; // 3 products per row
     });
     add_action( 'wp_footer', function (){
-?><style type="text/css">@media (min-width:768px) {.site-main ul.products li.product {width: 15.29411765% !important;}}</style><?php
+?><style type="text/css">@media (min-width:768px) {.site-main ul.products li.product {width: 20.58823529% !important;}}</style><?php
     });
 });
