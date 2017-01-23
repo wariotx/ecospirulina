@@ -99,4 +99,11 @@ JS;
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="theme-color" content="#ffffff">';
     }, 0);
+    // Change number or products per row to 3
+    add_filter('loop_shop_columns', function() {
+            return 5; // 3 products per row
+    });
+    add_action( 'wp_footer', function (){
+?><style type="text/css">@media (min-width:768px) {.site-main ul.products li.product {width: 15.29411765% !important;}}</style><?php
+    });
 });
