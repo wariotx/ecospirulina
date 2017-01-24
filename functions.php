@@ -106,4 +106,21 @@ JS;
     add_action( 'wp_footer', function (){
 ?><style type="text/css">@media (min-width:768px) {.site-main ul.products li.product {width: 20.58823529% !important;}}</style><?php
     });
+    add_action( 'storefront_header', function () {
+        echo "<div class='sticky-bg'></div>";
+        echo "<style type='text/css'>
+.sticky-nav .sticky-bg {
+    display: none;
+}
+.sticky-nav.is_stuck .sticky-bg {
+display: block;
+position: absolute;
+top: 0;
+background: #fff;
+height: 100%;
+width: 112%;
+margin-left: -6%;
+z-index: -1;
+box-shadow: 0 0 2px 1px rgba(0,0,0,.5);}</style>";
+    }, 65);
 });
