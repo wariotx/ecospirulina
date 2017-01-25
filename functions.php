@@ -91,14 +91,6 @@ add_action('init', function (){
 		</script>
 JS;
     });
-    add_action( 'wp_head', function(){
-        echo '<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="theme-color" content="#ffffff">';
-    }, 0);
     // Change number or products per row to 3
     add_filter('loop_shop_columns', function() {
             return 4; // 3 products per row
