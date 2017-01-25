@@ -115,8 +115,4 @@ margin-left: -6%;
 z-index: -1;
 box-shadow: 0 0 2px 1px rgba(0,0,0,.5);}</style>";
     }, 65);
-    add_action( 'widgets_init', function(){
-        require 'inc/class-pago-seguro-widget.php';
-        register_widget( 'PagoSeguro_Widget' );
-    });
 });
