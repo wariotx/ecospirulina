@@ -321,7 +321,6 @@ ul.products {
 
 		.woocommerce-LoopProduct-link {
 			display: block;
-			overflow: hidden;
 			img {
 				margin: -1*ms(3) auto;
 			}
@@ -2189,6 +2188,12 @@ dl.variation {
 
 			&.last {
 				margin-right: 0 !important;
+			}
+			.woocommerce-LoopProduct-link {
+				overflow: hidden;
+				max-width: 14em;
+				margin-left: auto;
+				margin-right: auto;
 			}
 		}
 	}
