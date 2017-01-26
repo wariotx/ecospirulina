@@ -11,11 +11,6 @@ jQuery(function () {
             offset_top: topSpacing,
             inner_scrolling: false,
             spacer: false
-        }).on("sticky_kit:stick", function(e) {
-            console.log("has stuck!", e.target);
-        })
-            .on("sticky_kit:unstick", function(e) {
-                console.log("has unstuck!", e.target);
-            });
+        });
     })(jQuery);
 });
