@@ -47,6 +47,7 @@ Tags:         	e-commerce, two-columns, left-sidebar, right-sidebar, custom-back
     >li {
       margin-left: 1.618em;
       margin-bottom: 1.618em;
+      padding: .618em;
       &:before{
         font-family: 'FontAwesome';
         display: inline-block;
@@ -55,20 +56,24 @@ Tags:         	e-commerce, two-columns, left-sidebar, right-sidebar, custom-back
         content: $fa-var-search;
       }
       $list-classes: (
-        (historia, $fa-var-globe),
-        (cultivo, $fa-var-pagelines),
-        (aliado, $fa-var-heartbeat),
-        (paraque, $fa-var-list-ol),
-        (paraquien, $fa-var-users),
-        (como, $fa-var-wrench),
-        (calidad, $fa-var-check-square-o),
-        (sostenible, $fa-var-recycle),
-        (productos, $fa-var-sitemap),
-        (ecospirulina, $fa-var-leaf)
+        (historia, $fa-var-globe, hsl(0, 30%, 50%)),
+        (cultivo, $fa-var-pagelines, hsl(36, 30%, 50%)),
+        (aliado, $fa-var-heartbeat, hsl(72, 30%, 50%)),
+        (paraque, $fa-var-list-ol, hsl(108, 30%, 50%)),
+        (paraquien, $fa-var-users, hsl(144, 30%, 50%)),
+        (como, $fa-var-wrench, hsl(180, 30%, 50%)),
+        (calidad, $fa-var-check-square-o, hsl(216, 30%, 50%)),
+        (sostenible, $fa-var-recycle, hsl(252, 30%, 50%)),
+        (productos, $fa-var-sitemap, hsl(288, 30%, 50%)),
+        (ecospirulina, $fa-var-leaf, hsl(324, 30%, 50%))
       );
-      @each $label, $logo in $list-classes {
-        &.#{$label}:before {
-          content: $logo;
+      @each $label, $logo, $color in $list-classes {
+        &.#{$label}{
+          background-color: lighten($color, 10%);
+          &:before {
+            content: $logo;
+            color: $color;
+          }
         }
       }
       ul {
