@@ -42,7 +42,7 @@ Tags:         	e-commerce, two-columns, left-sidebar, right-sidebar, custom-back
 .post-137 .entry-content{
   max-width: 55em;
   margin: auto;
-  >ol {
+  >ol.content {
     list-style: none;
     >li {
       margin-left: 1.618em;
@@ -75,6 +75,12 @@ Tags:         	e-commerce, two-columns, left-sidebar, right-sidebar, custom-back
         padding-left: 1em;
         padding-bottom: 1em;
       }
+    }
+    a.anchor {
+      visibility: hidden;
+      position: relative;
+      top: -200px;
+      display: inline-block;
     }
   }
 }
