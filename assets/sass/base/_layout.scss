@@ -15,7 +15,7 @@
 	}
 
 	.site-header {
-		padding-top: ms(5);
+		padding-top: ms(3);
 		padding-bottom: 0;
 		background-image: url("./assets/img/header.jpg");
 
@@ -23,7 +23,7 @@
 			display: block;
 			//@include span(3 of 12);
 			clear: both;
-			margin-bottom: ms(5);
+			margin-bottom: 0; //ms(5);
 			width: auto;
 			.custom-logo-link {
 				background-color: rgba(#fff,.8);
