@@ -39,3 +39,29 @@ Tags:         	e-commerce, two-columns, left-sidebar, right-sidebar, custom-back
 .storefront-sorting {
   display: none;
 }
+.post-137 .entry-content{
+  max-width: 55em;
+  margin: auto;
+  >ol {
+    list-style: none;
+    >li {
+      margin-left: 1.618em;
+      margin-bottom: 1.618em;
+      &:before{
+        font-family: 'FontAwesome';
+        display: inline-block;
+        text-indent: -1.5em;
+        font-size: 2em;
+      }
+      &:nth-child(1):before{
+        content: '\f0ac';
+      }
+      &:nth-child(2):before{
+        content: '\f0ad';
+      }
+      &:nth-child(3):before{
+        content: '\f0ae';
+      }
+    }
+  }
+}
