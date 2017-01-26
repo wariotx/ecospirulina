@@ -56,15 +56,15 @@ Tags:         	e-commerce, two-columns, left-sidebar, right-sidebar, custom-back
       }
       $list-classes: (
         (historia, $fa-var-globe),
-        (cultivo, $fa-var-wrench),
-        (aliado, $fa-var-globe),
-        (paraque, $fa-var-globe),
-        (paraquien, $fa-var-globe),
-        (como, $fa-var-globe),
-        (calidad, $fa-var-globe),
-        (sostenible, $fa-var-globe),
-        (productos, $fa-var-globe),
-        (ecospirulina, $fa-var-globe)
+        (cultivo, $fa-var-pagelines),
+        (aliado, $fa-var-heartbeat),
+        (paraque, $fa-var-list-ol),
+        (paraquien, $fa-var-users),
+        (como, $fa-var-wrench),
+        (calidad, $fa-var-check-square-o),
+        (sostenible, $fa-var-recycle),
+        (productos, $fa-var-sitemap),
+        (ecospirulina, $fa-var-leaf)
       );
       @each $label, $logo in $list-classes {
         &.#{$label}:before {
