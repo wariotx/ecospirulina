@@ -52,15 +52,20 @@ Tags:         	e-commerce, two-columns, left-sidebar, right-sidebar, custom-back
         display: inline-block;
         text-indent: -1.5em;
         font-size: 2em;
+        content: $fa-var-search;
       }
       &:nth-child(1):before{
-        content: '\f0ac';
+        content: $fa-var-globe;
       }
       &:nth-child(2):before{
-        content: '\f0ad';
+        content: $fa-var-wrench;
       }
       &:nth-child(3):before{
-        content: '\f0ae';
+        content: $fa-var-glass;
+      }
+      ul {
+        padding-left: 1em;
+        padding-bottom: 1em;
       }
     }
   }
