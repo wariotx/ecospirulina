@@ -39,6 +39,9 @@
 		float: left;
 	}
 }
+.account_lnk a {
+	display: none;
+}
 
 .site-header-cart {
 	list-style-type: none;
@@ -2080,6 +2083,11 @@ dl.variation {
 				}
 			}
 		}
+	}
+
+	.account_lnk a {
+		padding: ms(3) 0;
+		display: block;
 	}
 
 	/**

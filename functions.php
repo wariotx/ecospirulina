@@ -99,6 +99,14 @@ JS;
 ?><style type="text/css">@media (min-width:768px) {.site-main ul.products li.product {width: 20.58823529% !important;}}</style><?php
     });
     add_action( 'storefront_header', function () {
+?><div class='account_lnk'><?php if ( is_user_logged_in() ) { ?>
+<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account','woocommerce'); ?>"><?php _e('My Account','woocommerce'); ?></a>
+<?php } else { ?>
+<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register','woocommerce'); ?>"><?php _e('Login / Register','woocommerce'); ?></a>
+<?php } ?></div>
+<?php
+    }, 61);
+    add_action( 'storefront_header', function () {
         echo "<div class='sticky-bg'></div>";
         echo "<style type='text/css'>
 .sticky-nav .sticky-bg {
