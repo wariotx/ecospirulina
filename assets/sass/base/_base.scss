@@ -390,7 +390,8 @@ body {
 .site-footer {
 	background-color: #f3f3f3;
 	color: $color_body + #333;
-	padding: ms(3) 0 ms(6);
+	//padding: ms(3) 0 ms(6);
+	font-size: 12px;
 
 	h1,
 	h2,

@@ -110,6 +110,10 @@
 		@include container($container-width);
 		padding: 0 ms(5);
 		box-sizing: content-box;
+		@at-root .site-footer & {
+			@include container($container-width*18/12+0em);
+			padding: 0 ms(3);
+		}
 	}
 
 	.site-content {
@@ -170,7 +174,7 @@
 	 */
 	.footer-widgets {
 		@include clearfix;
-		padding-top: ms(7);
+		padding-top: ms(5);
 		border-bottom: 3px solid rgba(0,0,0,0.05);
 
 		&.col-2 {
