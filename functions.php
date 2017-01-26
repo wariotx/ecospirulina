@@ -102,7 +102,7 @@ JS;
 ?><div class='account_lnk'><?php if ( is_user_logged_in() ) { ?>
 <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account','woocommerce'); ?>"><?php _e('My Account','woocommerce'); ?></a>
 <?php } else { ?>
-<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register','woocommerce'); ?>"><?php _e('Login / Register','woocommerce'); ?></a>
+<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login','woocommerce');echo " / ";_e('Register','woocommerce'); ?>"><?php _e('Login','woocommerce');echo " / ";_e('Register','woocommerce');?></a>
 <?php } ?></div>
 <?php
     }, 61);
