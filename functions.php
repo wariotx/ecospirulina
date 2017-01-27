@@ -108,20 +108,20 @@ JS;
     }, 61);
     add_action( 'storefront_header', function () {
         echo "<div class='sticky-bg'></div>";
-        echo "<style type='text/css'>
-.sticky-nav .sticky-bg {
-    display: none;
-}
-.sticky-nav.is_stuck .sticky-bg {
-display: block;
-position: absolute;
-top: 0;
-background: #fff;
-height: 100%;
-width: 112%;
-margin-left: -6%;
-z-index: -1;
-box-shadow: 0 0 2px 1px rgba(0,0,0,.5);}</style>";
+//        echo "<style type='text/css'>
+//.sticky-nav .sticky-bg {
+//    display: none;
+//}
+//.sticky-nav.is_stuck .sticky-bg {
+//display: block;
+//position: absolute;
+//top: 0;
+//background: #fff;
+//height: 100%;
+//width: 112%;
+//margin-left: -6%;
+//z-index: -1;
+//box-shadow: 0 0 2px 1px rgba(0,0,0,.5);}</style>";
     }, 65);
     add_action('espirulina_home_page', 'storefront_page_content',           20);
     add_action('espirulina_home_page', 'storefront_init_structured_data',   30);

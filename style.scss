@@ -96,3 +96,19 @@ Tags:         	e-commerce, two-columns, left-sidebar, right-sidebar, custom-back
     }
   }
 }
+.sticky-nav {
+  .sticky-bg {
+    display: none;
+  }
+  &.is_stuck .sticky-bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    background: #fff;
+    height: 100%;
+    width: 112%;
+    margin-left: -6%;
+    z-index: -1;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,.5);
+  }
+}
