@@ -79,6 +79,9 @@ add_action('init', function (){
     if ( function_exists('yoast_breadcrumb') ) {
         remove_action( 'storefront_content_top',   'woocommerce_breadcrumb',   10 );
         add_action( 'storefront_content_top',   function() {
+            global $template;
+            $template_file = basename((__FILE__).$template);
+            if($template_file == 'template-empty.php') {return false;}
             yoast_breadcrumb('<p id="breadcrumbs" class="woocommerce-breadcrumb">','</p>');
         },   10 );
     }
