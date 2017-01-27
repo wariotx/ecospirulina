@@ -123,4 +123,23 @@ margin-left: -6%;
 z-index: -1;
 box-shadow: 0 0 2px 1px rgba(0,0,0,.5);}</style>";
     }, 65);
+    add_action('espirulina_home_page', 'storefront_page_content',           20);
+    add_action('espirulina_home_page', 'storefront_init_structured_data',   30);
 });
+if ( ! function_exists( 'espirulina_homepage_content' ) ) {
+    /**
+     * Display homepage content
+     * Hooked into the `homepage` action in the homepage template
+     *
+     * @since  1.0.0
+     * @return  void
+     */
+    function espirulina_homepage_content() {
+        while ( have_posts() ) {
+            the_post();
+
+            get_template_part( 'content', 'home' );
+
+        } // end of the loop.
+    }
+}

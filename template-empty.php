@@ -40,7 +40,7 @@
 			 * @hooked storefront_best_selling_products - 70
 			 */
 //			do_action( 'homepage' );
-            storefront_homepage_content();
+            espirulina_homepage_content();
 			?>
 
 		</main><!-- #main -->
