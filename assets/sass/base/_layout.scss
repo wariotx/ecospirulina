@@ -47,6 +47,19 @@
 		.site-header {
 			.secondary-navigation {
 				@include span(6 of 12);
+				margin-right: 0;
+				bottom: -1em;
+				position: relative;
+				li.page-item-137 {
+					background-image: url("./assets/img/kraft_bg.png");
+					border: 1px dashed lighten(#DDB787, 10%);
+					border-radius: 2px;
+					box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.8),inset -1px -1px 1px 1px rgba(0,0,0,0.2);
+					a {
+						font-weight: 700;
+						color: #9C7649;
+					}
+				}
 			}
 
 			.site-search {
